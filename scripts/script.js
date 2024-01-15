@@ -5,8 +5,8 @@ function mouseOverlay(delay) {
       mouseCircle = document.getElementById("mouse-circle");
 
     document.onmousemove = (e) => {
-      mousePosX = e.pageX;
-      mousePosY = e.pageY;
+      mousePosX = e.pageX + 15;
+      mousePosY = e.pageY + 15;
     };
 
     (this.delay = delay), (revisedMousePosX = 0), (revisedMousePosY = 0);
@@ -25,3 +25,12 @@ function mouseOverlay(delay) {
 }
 
 new mouseOverlay(2);
+
+{
+  let screenWidth = window.innerWidth;
+  console.log(screenWidth);
+  if (screenWidth < 650) {
+    let navbar = document.getElementById("navbar");
+    navbar.remove();
+  }
+}
