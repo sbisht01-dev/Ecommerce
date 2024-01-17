@@ -4,6 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Page</title>
+    <link rel="stylesheet" href="stylesheets/navbar.css">
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Sarabun:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body data-barba="wrapper">
+    <div class="container">
+      <div class="navbar" id="navbar">
+        <div id="logo">Ecommerce</div>
+        <div id="navigation">
+          <div class="menu" id="home"><a href="">Home</a></div>
+          <div class="menu" id="Collection"><a href="">Collection</a></div>
+          <div class="menu" id="Contact Us"><a href="">Contact Us</a></div>
+          <div class="menu" id="About us"><a href="">About us</a></div>
+        </div>
+      </div>
+      <div class="hero" data-barba="container" data-barba-namespace="content>
+        <h1>this is loaded page</h1>
+      </div>
+    </div>
+
+    <!-- *********************************************************************************************************** -->
+    <script src="scripts/script.js"></script>
+    <!-- Barba JS -->
+    <!-- unpkg -->
+    <script src="https://unpkg.com/@barba/core"></script>
+    <!-- jsdelivr -->
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+
+    <!-- RoughEase, ExpoScaleEase and SlowMo are all included in the EasePack file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/EasePack.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/CustomEase.min.js"></script>
+  </body>
 </html>
