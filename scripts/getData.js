@@ -138,5 +138,57 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Product not found in the array.");
   }
 
-  // Set the background image to the element with id "image" (adjust the selector based on your HTML)
+  if (selectedProduct) {
+    // Fill the HTML elements with product details
+    document.getElementById(
+      "productImage"
+    ).style.backgroundImage = `url('${selectedProduct.image}')`;
+    document.getElementById("name").getElementsByTagName("p")[0].innerText =
+      selectedProduct.name;
+    document.getElementById(
+      "rate"
+    ).innerText = `${selectedProduct.price.toFixed(2)}$`;
+    document.getElementById("rating").innerText = selectedProduct.rating;
+    document
+      .getElementById("description")
+      .getElementsByTagName("p")[0].innerText = selectedProduct.description;
+  } else {
+    console.log("Product not found in the array.");
+  }
+});
+
+function windowAlert() {
+  alert("Item added to cart");
+}
+
+const productGrid = document.getElementById("productGrid");
+
+products.forEach((item, index) => {
+  // Create a product item element
+  const productItem = document.createElement("div");
+  productItem.classList.add("items");
+
+  // Create the #image element
+  const imageElement = document.createElement("div");
+  imageElement.id = "image";
+
+  // Set the background image with js
+  imageElement.style.backgroundImage = `url("${item.image}")`;
+
+  // Add the #image element to the product item
+  productItem.appendChild(imageElement);
+
+  // adding html content from js to webpage
+  productItem.innerHTML += `
+    <div class="detail">
+      <p>${item.name}</p>
+      <div class="description">
+        <div class="rate">${item.price}$</div>
+        <div class="rating"><img src="assets\star.png" alt="rating">${item.rating}</div>
+      </div>
+    </div>
+  `;
+
+  // Add the product item to the product grid
+  productGrid.appendChild(productItem);
 });
