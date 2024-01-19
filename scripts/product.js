@@ -97,27 +97,6 @@ const products = [
   },
 ];
 
-// const productGrid = document.getElementById("productGrid");
-// products.forEach((item, index) => {
-//   // Create a product item element
-//   const productItem = document.createElement("div");
-//   productItem.classList.add("items");
-
-//   productItem.innerHTML = `
-//                 <div id="image">
-//                 </div>
-//                 <div class="detail">
-//                     <p>${item.name}</p>
-//                     <div class="description">
-//                         <div class="rate">${item.price}$</div>
-//                         <div class="rating">${item.rating}</div>
-//                     </div>
-//                 </div>
-//             `;
-
-//   productGrid.appendChild(productItem);
-// });
-
 const productGrid = document.getElementById("productGrid");
 
 products.forEach((item, index) => {
@@ -129,13 +108,13 @@ products.forEach((item, index) => {
   const imageElement = document.createElement("div");
   imageElement.id = "image";
 
-  // Set the background image dynamically
+  // Set the background image with js
   imageElement.style.backgroundImage = `url("${item.image}")`;
 
   // Add the #image element to the product item
   productItem.appendChild(imageElement);
 
-  // Add content to the product item
+  // adding html content from js to webpage
   productItem.innerHTML += `
     <div class="detail">
       <p>${item.name}</p>
