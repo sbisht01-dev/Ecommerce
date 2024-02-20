@@ -157,8 +157,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-function windowAlert() {
-  alert("Item added to cart");
+function addToCartPage() {
+  let cart =
+    "https://www.amazon.in/Perfume-Aromatic-Citrus-Strong-Lasting/dp/B09D3Q8MTL/ref=sr_1_22?crid=2EDW7YA3UT1W0&dib=eyJ2IjoiMSJ9.QPfn1-tTnuPVcg_zkkZGg6zo7JqWLs0j-G-FSbfOPhbF1KQibAytx5VdKlwqSoytEFjw7HAKcHEXgbFEiNdg9UnjuKReuE4ZESsTByyQt_9dOrbd1fJXX4QpNAyY7l8zcUApBPXwdUzATrBeXFziMWDl-48odV4h02KvdjwrWesUPgEBlf3FZ7t2E-8RYVWiMQg5V6EuCmdfPBQd4XX9jMeadSORyi3iji4Fqe1KEbdXmPhwimPLaNuOsLxxJ8lEYwaWp4m8tOW6jUx5EEAvNIH75komUH_LGUsLX7H2abU.RuyMjh4nF9aZWRYpXx0s7eMwlU6krb6pD_j3ZUGqdRY&dib_tag=se&keywords=perfume&qid=1708458217&sprefix=perfu%2Caps%2C314&sr=8-22-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9tdGY&psc=1";
+  window.location.href = cart;
 }
 
 const productGrid = document.getElementById("productGrid");
